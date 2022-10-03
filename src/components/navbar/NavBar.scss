@@ -1,0 +1,11 @@
+.navbar-container{
+    height: 150px;
+    font-size: 1.3vw;
+    border-bottom: 1px solid #222;
+
+    .navbar-items{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

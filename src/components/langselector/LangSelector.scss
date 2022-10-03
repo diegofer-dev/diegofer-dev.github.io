@@ -1,0 +1,16 @@
+.lang-container {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    .lang-item {
+        img {
+            border-radius: 50%;
+            border: 1px solid #111;
+            cursor: pointer;
+        }
+    }
+}

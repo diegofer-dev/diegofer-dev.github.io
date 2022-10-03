@@ -1,0 +1,26 @@
+/* Header */
+.home-container{
+    height: 100vh;
+    .hi-text{
+        font-weight: bold;
+        font-size: 3vw;
+    }
+    
+    .hi-photo{
+        img{
+            border: #111 solid 3px;
+            border-radius: 50%;
+        }
+    }
+
+    .hi-introduction{
+        font-size: 1vw;
+    }
+
+    .question1{
+        font-size:3.5vw;
+        font-weight: bold;
+    }
+
+
+}

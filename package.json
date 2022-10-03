@@ -4,10 +4,11 @@
   "description": "Pagina web personal",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b main -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "echo \"Testing a lot ...\""
+    "test": "echo \"Testing a lot ...\"",
+    "help": "gh-pages --help"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/diegofer-dev/diegofer-dev.github.io/issues"
   },
-  "homepage": "https://diegofer-dev.github.io",
+  "homepage": "https://diegofer-dev.github.io/",
   "dependencies": {
     "gh-pages": "^4.0.0",
     "react": "^18.2.0",

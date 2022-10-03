@@ -1,0 +1,40 @@
+{
+  "name": "diegofer-dev.github.io",
+  "version": "1.0.0",
+  "description": "Pagina web personal",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "echo \"Testing a lot ...\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegofer-dev/diegofer-dev.github.io.git"
+  },
+  "author": "Diego Fernandez Blanco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegofer-dev/diegofer-dev.github.io/issues"
+  },
+  "homepage": "https://diegofer-dev.github.io",
+  "dependencies": {
+    "gh-pages": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

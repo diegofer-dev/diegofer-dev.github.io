@@ -1,7 +1,8 @@
 .job-card{
-    border: 1px solid #111;
+    border: 2px solid #111;
     border-radius: 30px;
     width: 90%;
+    max-width: 90%;
     text-align: center;
 
     .job-card-logo{
@@ -9,7 +10,7 @@
     }
     .job-card-title{
         height: 50%;
-        border-top: 1px solid #111;
+        border-top: 2px solid #111;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
         padding: 20px;

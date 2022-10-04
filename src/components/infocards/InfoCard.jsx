@@ -5,8 +5,8 @@ const InfoCard = ({ backColor, title, body}) => {
         <div className="info-card" style={{
             backgroundColor: backColor,
             }}>
-            <div className="info-card-title mb-5">{ title}</div>
-            <div className="info-card-body">{ body }</div>
+            <div className="mb-5 fs-1">{ title}</div>
+            <div className="fs-5">{ body }</div>
         </div>
     )
 }

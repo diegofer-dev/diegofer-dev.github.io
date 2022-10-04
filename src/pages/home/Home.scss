@@ -1,6 +1,6 @@
 /* Header */
 .home-container{
-    height: 100vh;
+    height: 300vh;
     .hi-text{
         font-weight: bold;
         font-size: 3vw;
@@ -17,10 +17,27 @@
         font-size: 1vw;
     }
 
-    .question1{
-        font-size:3.5vw;
+    .section1,
+    .section2,
+    .section3,
+    .section4{
+        text-align: center;
+        margin-top: 150px;
+        font-size: 3.5vw;
         font-weight: bold;
     }
 
+    .contact-info{
+        width: 80%;
+        .rrss{
+            padding: 30px;
+            text-align: center;
+            font-size: 1vw;
+            font-weight: bold;
+        }
+        .rrss-below{
+            border-top: 1px solid #111;
+        }
+    }
 
 }

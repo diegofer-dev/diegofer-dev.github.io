@@ -8,9 +8,9 @@ import "./Home.scss";
 const Home = () => {
     const { t } = useTranslation();
     const colors = [
-        "#D9BBF9",
-        "#CCA7A2",
-        "#BBDBB4"
+        "#d8ffb6",
+        "#ffd3f3",
+        "#e3fff8"
     ]
     const jobs = [
         { businessLogo: "https://via.placeholder.com/150", jobTitle: "Lorem ipsum dolor sit,amet consectetur adipisicing elit" },

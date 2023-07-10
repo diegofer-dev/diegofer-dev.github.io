@@ -23,6 +23,23 @@ const Home = () => {
         { businessLogo: "https://via.placeholder.com/150", jobTitle: "Lorem ipsum dolor sit,amet consectetur adipisicing elit" },
         { businessLogo: "https://via.placeholder.com/150", jobTitle: "Lorem ipsum dolor sit,amet consectetur adipisicing elit" }
     ];
+
+    const technologies = {
+        frontend: [
+            {
+                logo: "https://via.placeholder.com/50",
+                bodyKey: "canDo.frontend.body"
+            },
+            {
+                logo: "https://via.placeholder.com/50",
+                bodyKey: "canDo.frontend.body"
+            },
+            {
+                logo: "https://via.placeholder.com/50",
+                bodyKey: "canDo.frontend.body"
+            }
+        ]
+    }
     return (
         <div>
             <LangSelector />
@@ -38,53 +55,45 @@ const Home = () => {
                         <img src="https://via.placeholder.com/150" width={300}></img>
                     </div>
                     <div className="hi-introduction col-lg-8 col-12 fs-5">
-                        Lorem ipsum dolor sit,
-                        amet consectetur adipisicing elit. Voluptatum a eaque amet labore dolore aspernatur minus praesentium,
-                        voluptatem similique id aliquid ipsum recusandae dolorem harum et dolores quo ipsa necessitatibus.
+                        {t("header.introduction")}
                     </div>
                 </div>
-                <div className="section1">Que se hacer?</div>
+                <div className="section1">{t("canDo.title")}</div>
                 <div className="row mt-5">
                     <div className="col-12 col-lg-4 d-flex justify-content-center">
-                        <InfoCard backColor={colors[0]} title={"Frontend"} body={`Lorem ipsum dolor sit,
-                        amet consectetur adipisicing elit. Voluptatum a eaque amet labore dolore aspernatur minus praesentium,
-                        voluptatem similique id aliquid ipsum recusandae dolorem harum et dolores quo ipsa necessitatibus.`} />
+                        <InfoCard backColor={colors[0]} titleKey={"canDo.frontend.title"} technologies={technologies.frontend} />
                     </div>
                     <div className="col-12 col-lg-4 d-flex justify-content-center">
-                        <InfoCard backColor={colors[1]} title={"Backend"} body={`Lorem ipsum dolor sit,
-                        amet consectetur adipisicing elit. Voluptatum a eaque amet labore dolore aspernatur minus praesentium,
-                        voluptatem similique id aliquid ipsum recusandae dolorem harum et dolores quo ipsa necessitatibus.`} />
+                        <InfoCard backColor={colors[1]} titleKey={"canDo.backend.title"} technologies={technologies.frontend} />
                     </div>
                     <div className="col-12 col-lg-4 d-flex justify-content-center">
-                        <InfoCard backColor={colors[2]} title={"Bases de datos"} body={`Lorem ipsum dolor sit,
-                        amet consectetur adipisicing elit. Voluptatum a eaque amet labore dolore aspernatur minus praesentium,
-                        voluptatem similique id aliquid ipsum recusandae dolorem harum et dolores quo ipsa necessitatibus.`} />
+                        <InfoCard backColor={colors[2]} titleKey={"Bases de datos"} technologies={technologies.frontend} />
                     </div>
                 </div>
                 <div className="section2">Donde he trabajado?</div>
                 <div className="row mt-5">
                     {jobs.map((e, idx) =>
-                    <div
-                    key={`work-exp-${idx}`} 
-                    className="p-3 col-lg-4 col-12 d-flex justify-content-center">
-                        <JobCards
-                        backColor={colors[idx % colors.length]}
-                        jobTitle={e.jobTitle} 
-                        businessLogo={e.businessLogo} />
-                    </div>
+                        <div
+                            key={`work-exp-${idx}`}
+                            className="p-3 col-lg-4 col-12 d-flex justify-content-center">
+                            <JobCards
+                                backColor={colors[idx % colors.length]}
+                                jobTitle={e.jobTitle}
+                                businessLogo={e.businessLogo} />
+                        </div>
                     )}
                 </div>
                 <div className="section3">Mis proyectos</div>
                 <div className="row mt-5">
                     {pojects.map((e, idx) =>
-                    <div 
-                    key={`my-projs-${idx}`}
-                    className="p-3 col-lg-4 col-12 d-flex justify-content-center">
-                        <JobCards
-                        backColor={colors[idx % colors.length]}
-                        jobTitle={e.jobTitle} 
-                        businessLogo={e.businessLogo} />
-                    </div>
+                        <div
+                            key={`my-projs-${idx}`}
+                            className="p-3 col-lg-4 col-12 d-flex justify-content-center">
+                            <JobCards
+                                backColor={colors[idx % colors.length]}
+                                jobTitle={e.jobTitle}
+                                businessLogo={e.businessLogo} />
+                        </div>
                     )}
                 </div>
                 <div className="section4">Contáctame</div>
@@ -101,7 +110,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     )

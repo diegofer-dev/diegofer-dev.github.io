@@ -2,3 +2,10 @@ $background: #fff7f4;
 $color-left: #d8ffb6;
 $color-center: #ffd3f3;
 $color-right:  #e3fff8;
+
+:export {
+    background: $background;
+    colorLeft: $color-left;
+    colorCenter: $color-center;
+    colorRight: $color-right;
+}

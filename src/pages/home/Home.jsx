@@ -4,6 +4,7 @@ import InfoCard from '../../components/infocards/InfoCard';
 import JobCards from '../../components/jobcards/JobCards';
 import LangSelector from '../../components/langselector/LangSelector';
 import NavBar from '../../components/navbar/NavBar';
+import variables from '../../Variables.scss';
 import "./Home.scss";
 const Home = () => {
     const { t } = useTranslation();
@@ -13,10 +14,9 @@ const Home = () => {
         "#e3fff8"
     ]
     const jobs = [
-        { businessLogo: "https://via.placeholder.com/150", jobTitle: "Lorem ipsum dolor sit,amet consectetur adipisicing elit" },
-        { businessLogo: "https://via.placeholder.com/150", jobTitle: "Lorem ipsum dolor sit,amet consectetur adipisicing elit" },
-        { businessLogo: "https://via.placeholder.com/150", jobTitle: "Lorem ipsum dolor sit,amet consectetur adipisicing elit" },
-        { businessLogo: "https://via.placeholder.com/150", jobTitle: "Lorem ipsum dolor sit,amet consectetur adipisicing elit" }
+        { businessLogo: "https://via.placeholder.com/150", jobTitleKey: "workplaces.futureSpace" },
+        { businessLogo: "https://via.placeholder.com/150", jobTitleKey: "workplaces.saoBranding" },
+        { businessLogo: "https://via.placeholder.com/150", jobTitleKey: "workplaces.neo9" }
     ];
     const pojects = [
         { businessLogo: "https://via.placeholder.com/150", jobTitle: "Lorem ipsum dolor sit,amet consectetur adipisicing elit" },
@@ -28,16 +28,36 @@ const Home = () => {
         frontend: [
             {
                 logo: "https://via.placeholder.com/50",
-                bodyKey: "canDo.frontend.body"
+                bodyKey: "canDo.frontend.react"
             },
             {
                 logo: "https://via.placeholder.com/50",
-                bodyKey: "canDo.frontend.body"
+                bodyKey: "canDo.frontend.angular"
             },
             {
                 logo: "https://via.placeholder.com/50",
-                bodyKey: "canDo.frontend.body"
+                bodyKey: "canDo.frontend.vue"
             }
+        ],
+        backend: [
+            {
+                logo: "https://via.placeholder.com/50",
+                bodyKey: "canDo.backend.spring"
+            },
+            {
+                logo: "https://via.placeholder.com/50",
+                bodyKey: "canDo.backend.django"
+            },
+        ],
+        bbdd: [
+            {
+                logo: "https://via.placeholder.com/50",
+                bodyKey: "canDo.bbdd.db"
+            },
+            {
+                logo: "https://via.placeholder.com/50",
+                bodyKey: "canDo.bbdd.kubernetes"
+            },
         ]
     }
     return (
@@ -61,16 +81,16 @@ const Home = () => {
                 <div className="section1">{t("canDo.title")}</div>
                 <div className="row mt-5">
                     <div className="col-12 col-lg-4 d-flex justify-content-center">
-                        <InfoCard backColor={colors[0]} titleKey={"canDo.frontend.title"} technologies={technologies.frontend} />
+                        <InfoCard backColor={variables.colorLeft} titleKey={"canDo.frontend.title"} technologies={technologies.frontend} />
                     </div>
                     <div className="col-12 col-lg-4 d-flex justify-content-center">
-                        <InfoCard backColor={colors[1]} titleKey={"canDo.backend.title"} technologies={technologies.frontend} />
+                        <InfoCard backColor={variables.colorCenter} titleKey={"canDo.backend.title"} technologies={technologies.backend} />
                     </div>
                     <div className="col-12 col-lg-4 d-flex justify-content-center">
-                        <InfoCard backColor={colors[2]} titleKey={"Bases de datos"} technologies={technologies.frontend} />
+                        <InfoCard backColor={variables.colorRight} titleKey={"canDo.bbdd.title"} technologies={technologies.bbdd} />
                     </div>
                 </div>
-                <div className="section2">Donde he trabajado?</div>
+                <div className="section2">{t("workplaces.title")}</div>
                 <div className="row mt-5">
                     {jobs.map((e, idx) =>
                         <div
@@ -78,7 +98,7 @@ const Home = () => {
                             className="p-3 col-lg-4 col-12 d-flex justify-content-center">
                             <JobCards
                                 backColor={colors[idx % colors.length]}
-                                jobTitle={e.jobTitle}
+                                jobTitleKey={e.jobTitleKey}
                                 businessLogo={e.businessLogo} />
                         </div>
                     )}

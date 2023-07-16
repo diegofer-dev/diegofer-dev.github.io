@@ -6,10 +6,11 @@
     text-align: center;
 
     .job-card-logo{
-        height: 50%;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
     }
+    
     .job-card-title{
-        height: 50%;
         border-top: 2px solid #111;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
